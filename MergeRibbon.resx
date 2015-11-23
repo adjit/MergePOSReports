@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mergeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
+        YQUAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
         AAAqd0lEQVR4Xu3d7ZXbRrIA0A3BISgEh6AQFIJDUAgOQSE4BIXgEByCQ3AG+6pWwyd0u2aGM0MS1cCt
         c+6fWnvNYYPoQn/hP//973/ZWcSn8Dn8/uTPJ3+H/Afe4vLv/hHy/+tL+Fz9dwE4rzLJ/URkZ5+d8reQ
         HfW28763v8L38DUoCgBOrExyOxG/hOzw84n8PU/093YpCH6tPj8Ax1Qm+ZiI7PR/C9m5bjvb7rJAyZEJ

@@ -37,7 +37,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MergeRibbon));
             this.MergeTab = this.Factory.CreateRibbonTab();
             this.mergeGroup = this.Factory.CreateRibbonGroup();
-            this.button1 = this.Factory.CreateRibbonButton();
+            this.mergeButton = this.Factory.CreateRibbonButton();
             this.MergeTab.SuspendLayout();
             this.mergeGroup.SuspendLayout();
             this.SuspendLayout();
@@ -50,19 +50,20 @@
             // 
             // mergeGroup
             // 
-            this.mergeGroup.Items.Add(this.button1);
+            this.mergeGroup.Items.Add(this.mergeButton);
             this.mergeGroup.Label = "Merge";
             this.mergeGroup.Name = "mergeGroup";
             // 
-            // button1
+            // mergeButton
             // 
-            this.button1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageName = "Merge Image";
-            this.button1.Label = "Merge Reports";
-            this.button1.Name = "button1";
-            this.button1.ScreenTip = "Merge POS Reports";
-            this.button1.ShowImage = true;
+            this.mergeButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.mergeButton.Image = ((System.Drawing.Image)(resources.GetObject("mergeButton.Image")));
+            this.mergeButton.ImageName = "Merge Image";
+            this.mergeButton.Label = "Merge Reports";
+            this.mergeButton.Name = "mergeButton";
+            this.mergeButton.ScreenTip = "Merge POS Reports";
+            this.mergeButton.ShowImage = true;
+            this.mergeButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // MergeRibbon
             // 
@@ -82,7 +83,7 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab MergeTab;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup mergeGroup;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton mergeButton;
     }
 
     partial class ThisRibbonCollection

@@ -19,3 +19,4 @@ D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSRe
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.csproj.GenerateResource.Cache
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.dll
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.pdb
+D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.MergeReportInterface.resources
