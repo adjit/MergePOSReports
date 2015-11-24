@@ -52,14 +52,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MergePOSReports.dll" size="395776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MergePOSReports.dll" size="399360">
       <assemblyIdentity name="MergePOSReports" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+THIQ3vLzNEgItJGE1DA1k4iZ/I35lxTjklcsR1lfiY=</dsig:DigestValue>
+        <dsig:DigestValue>3eWd4aIh4NlRv7fEOQsKiX4OXUESOC1c9KZ0XhKroWE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -135,6 +135,30 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.dll" size="105984">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>e4g4i4Nn8Nhz0OO2b1M4acJONG+28LLGx4P5McyaFjE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.Shell.dll" size="542720">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack.Shell" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ql2AzcDaUpcAMTCbRX4+P9UFuxrBP7eYAdFb+7SnALI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <vstav3:addIn xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">
     <vstav3:entryPointsCollection>
       <vstav3:entryPoints>
@@ -160,4 +184,4 @@
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=METRO\atawil" issuerKeyHash="63925fee6fcf01f4b21c57326e51415b7aebe2b9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>dI/qTQ5A9XZPeK4CFOaEASpjVCX99Q1nA0mN38jegFc=</DigestValue></Reference></SignedInfo><SignatureValue>SYFK+0wnRD5mI9/0xXnaQGJSSf/+FtzKpSN38LB+vHMPjEmyCsXAZhphe2JBara8s4H4UddSpsw79FewP+DnDmWdDTjO/Lp7VmaxJRgFZkwCxpdpmpaKAvAEtnoC+Ccc0wr+uxg7/eLSzFPHgwgvT9o55FB3i75x9gpnq7dHQ+E=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>oFnQ6BrWXKCMYc8fBTcVIYdtZnXVSUs6q+dDGIrIsFdikASqi60fLOAP/mc1nNY4SREArl1lQQY4bc0Dmd2wVH7YTICFZetC27K3I4d/GTLv4A41oTJdCWPGMGPP0Fd+dKeNR/0E2OCDnr7LE0fZ74Si1F4A7EMF6TNEH1BuCz8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5780dec8df8d4903670df5fd2554632a0184e61402ae784f76f5400e4dea8f74" Description="" Url=""><as:assemblyIdentity name="MergePOSReports.dll" version="1.0.0.0" publicKeyToken="80a2f5ea2fae3d3e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=METRO\atawil</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>VW5J8/1yez/2ADnwWbseyg+bvHZ9EI1VRems/DVK4Ps=</DigestValue></Reference></SignedInfo><SignatureValue>KLolh21L1KfB1Yqp4KHo66fbBkd8lo02yGRI//y/NjHVV9w7n9CUU1+RwKFJHyqjDojmkvuPePwgKOiRb7cYu3V5JoFl0CKRZUwbH+LzRjfH8D2BuxA2mke23Dqfz8/w0iiLKQuP3bPKgoO1/0xTT0HGdc+HqT4VZ9MCh5sAJcw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>oFnQ6BrWXKCMYc8fBTcVIYdtZnXVSUs6q+dDGIrIsFdikASqi60fLOAP/mc1nNY4SREArl1lQQY4bc0Dmd2wVH7YTICFZetC27K3I4d/GTLv4A41oTJdCWPGMGPP0Fd+dKeNR/0E2OCDnr7LE0fZ74Si1F4A7EMF6TNEH1BuCz8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQRHR41yfeQJ1MybGyVixiEzANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgATQBFAFQAUgBPAFwAYQB0AGEAdwBpAGwwHhcNMTUxMTIzMjIzMzI5WhcNMTYxMTIzMDQzMzI5WjAjMSEwHwYDVQQDHhgATQBFAFQAUgBPAFwAYQB0AGEAdwBpAGwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKBZ0Oga1lygjGHPHwU3FSGHbWZ11UlLOqvnQxiKyLBXYpAEqoutHyzgD/5nNZzWOEkRAK5dZUEGOG3NA5ndsFR+2EyAhWXrQtuytyOHfxky7+AONaEyXQljxjBjz9BXfnSnjUf9BNjgg56+yxNH2e+EotReAOxDBekzRB9Qbgs/AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAR+gJhIiwySpvJCnOQxCFmszSsACYE8VWNPwrPCgHlUoAxTJitIZx1Vz1U22+9hlgmnyXCGQ/vy3qQXv8fNe7m1GC2mPanVAdKA2AY7ukA5tx+jihweXomO77WOrrfU+LJf5n7SAEIvmp/AqxYbFc2GT9GzkfLBCy5U3jr4tGAQQ=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=METRO\atawil" issuerKeyHash="63925fee6fcf01f4b21c57326e51415b7aebe2b9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vN7u5+qlfqpgqLjIs0LaLCtrmXvhBl0xUECs+oZtkiY=</DigestValue></Reference></SignedInfo><SignatureValue>i2ILgQXXkY+RUh8s1DUnkS59y9Mdsbdy3/pqCfTjNxGXdF0/IU7TsfX2Kc+VWd0KLldr/07HXFEImz+OO/Ii03DXnsGyp1YKD/hCdbrF6KoEWZ5z5iAmSI3+gizrSWKRm8f2wnpT5AA7HdwYhC5dWyKkFwCrex4VZCZJA1OUVzg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>oFnQ6BrWXKCMYc8fBTcVIYdtZnXVSUs6q+dDGIrIsFdikASqi60fLOAP/mc1nNY4SREArl1lQQY4bc0Dmd2wVH7YTICFZetC27K3I4d/GTLv4A41oTJdCWPGMGPP0Fd+dKeNR/0E2OCDnr7LE0fZ74Si1F4A7EMF6TNEH1BuCz8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="26926d86faac4050315d06e17b996b2b2cda42b3c8b8a860aa7ea5eae7eedebc" Description="" Url=""><as:assemblyIdentity name="MergePOSReports.dll" version="1.0.0.0" publicKeyToken="80a2f5ea2fae3d3e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=METRO\atawil</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3qSlkO6pJdxMEPyE+A9mk6UQriq01SVQMZBYjZMXpfA=</DigestValue></Reference></SignedInfo><SignatureValue>AyH5J94EDVzkLaHsv4q04ly9Yfw+sG7mBPY+9re15YBgAPTLEaT9/j9DpabGr2dIiDOK+IpX1XEjRGTPDRumSajw9zs37plhgUb+1Dj71H6dOlZSjp0JxW/lJurU9sT+5JQCALKwgAJWuRXJl4VtkJ/dIZsSMQHFEgXTGboMgI4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>oFnQ6BrWXKCMYc8fBTcVIYdtZnXVSUs6q+dDGIrIsFdikASqi60fLOAP/mc1nNY4SREArl1lQQY4bc0Dmd2wVH7YTICFZetC27K3I4d/GTLv4A41oTJdCWPGMGPP0Fd+dKeNR/0E2OCDnr7LE0fZ74Si1F4A7EMF6TNEH1BuCz8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQRHR41yfeQJ1MybGyVixiEzANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgATQBFAFQAUgBPAFwAYQB0AGEAdwBpAGwwHhcNMTUxMTIzMjIzMzI5WhcNMTYxMTIzMDQzMzI5WjAjMSEwHwYDVQQDHhgATQBFAFQAUgBPAFwAYQB0AGEAdwBpAGwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKBZ0Oga1lygjGHPHwU3FSGHbWZ11UlLOqvnQxiKyLBXYpAEqoutHyzgD/5nNZzWOEkRAK5dZUEGOG3NA5ndsFR+2EyAhWXrQtuytyOHfxky7+AONaEyXQljxjBjz9BXfnSnjUf9BNjgg56+yxNH2e+EotReAOxDBekzRB9Qbgs/AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAR+gJhIiwySpvJCnOQxCFmszSsACYE8VWNPwrPCgHlUoAxTJitIZx1Vz1U22+9hlgmnyXCGQ/vy3qQXv8fNe7m1GC2mPanVAdKA2AY7ukA5tx+jihweXomO77WOrrfU+LJf5n7SAEIvmp/AqxYbFc2GT9GzkfLBCy5U3jr4tGAQQ=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

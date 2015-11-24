@@ -20,3 +20,7 @@ D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSRe
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.dll
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.pdb
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\obj\Debug\MergePOSReports.MergeReportInterface.resources
+D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\bin\Debug\Microsoft.WindowsAPICodePack.dll
+D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\bin\Debug\Microsoft.WindowsAPICodePack.pdb
+D:\Users\atawil\Documents\Visual Studio 2015\Projects\MergePOSReports\MergePOSReports\bin\Debug\Microsoft.WindowsAPICodePack.Shell.pdb
