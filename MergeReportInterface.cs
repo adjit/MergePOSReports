@@ -24,12 +24,15 @@ namespace MergePOSReports
             //DialogResult rootFolder = rootFolderBrowser.ShowDialog();
             MSDialog.CommonOpenFileDialog folderDialog = new MSDialog.CommonOpenFileDialog();
             folderDialog.IsFolderPicker = true;
+
             MSDialog.CommonFileDialogResult rootDialog = folderDialog.ShowDialog();
 
             if(rootDialog == MSDialog.CommonFileDialogResult.Ok)
             {
-                System.Windows.Forms.MessageBox.Show("Folder found: " + folderDialog.FileName.ToString(), "Message");
                 rootFolderText.Text = folderDialog.FileName.ToString();
+
+                /*string[] files = Directory.GetFiles(folderDialog.FileName.ToString());
+                MessageBox.Show("Files found: " + files.Length.ToString(), "Message");*/
             }
 
             /*if (rootFolder == DialogResult.OK)
