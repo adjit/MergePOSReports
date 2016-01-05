@@ -18,7 +18,7 @@ namespace MergePOSReports
         {
             InitializeComponent();
         }
-
+     
         private void button1_Click(object sender, EventArgs e)
         {
             //DialogResult rootFolder = rootFolderBrowser.ShowDialog();
@@ -26,11 +26,11 @@ namespace MergePOSReports
             folderDialog.IsFolderPicker = true;
 
             MSDialog.CommonFileDialogResult rootDialog = folderDialog.ShowDialog();
-
+            
             if(rootDialog == MSDialog.CommonFileDialogResult.Ok)
-            {
+            { 
                 rootFolderText.Text = folderDialog.FileName.ToString();
-
+            
                 /*string[] files = Directory.GetFiles(folderDialog.FileName.ToString());
                 MessageBox.Show("Files found: " + files.Length.ToString(), "Message");*/
             }
@@ -40,6 +40,12 @@ namespace MergePOSReports
                 string[] files = Directory.GetFiles(rootFolderBrowser.SelectedPath);
                 System.Windows.Forms.MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
             }*/
+        }
+
+        private void MergeButton_Click(object sender, EventArgs e)
+        {
+            ThisAddIn that = Globals.ThisAddIn;
+            that.mergeReports(that.setMergeProperties(this.reportPrefix.Text, this.startDate.Value, this.endDate.Value, this.rootFolderText.Text));
         }
     }
 }

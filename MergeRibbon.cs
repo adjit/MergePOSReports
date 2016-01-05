@@ -15,8 +15,7 @@ namespace MergePOSReports
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            MergeReportInterface ui = new MergeReportInterface();
-            ui.ShowDialog();
+            Globals.ThisAddIn.openReportInterface();
         }
     }
 }

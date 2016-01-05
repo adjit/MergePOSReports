@@ -187,7 +187,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectColumns.resx">
+      <DependentUpon>SelectColumns.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MergePOSReports_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -196,6 +200,12 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SelectColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectColumns.Designer.cs">
+      <DependentUpon>SelectColumns.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -207,6 +217,18 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_Up_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_Down_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move_to_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move_to_top.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

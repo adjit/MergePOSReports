@@ -142,6 +142,7 @@
             this.MergeButton.TabIndex = 4;
             this.MergeButton.Text = "Merge Reports";
             this.MergeButton.UseVisualStyleBackColor = true;
+            this.MergeButton.Click += new System.EventHandler(this.MergeButton_Click);
             // 
             // MergeReportInterface
             // 
@@ -166,14 +167,14 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker startDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox reportPrefix;
-        private System.Windows.Forms.DateTimePicker endDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FolderBrowserDialog rootFolderBrowser;
         private System.Windows.Forms.Button folderBrowserButton;
-        private System.Windows.Forms.TextBox rootFolderText;
         private System.Windows.Forms.Button MergeButton;
+        private System.Windows.Forms.TextBox rootFolderText;
+        private System.Windows.Forms.DateTimePicker startDate;
+        private System.Windows.Forms.TextBox reportPrefix;
+        private System.Windows.Forms.DateTimePicker endDate;
     }
 }
