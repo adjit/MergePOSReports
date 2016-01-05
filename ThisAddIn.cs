@@ -124,6 +124,7 @@ namespace MergePOSReports
                     //else continue;
                 }
 
+
                 range = xlWorkSheet.Range[xlWorkSheet.Cells[rows][1], xlWorkSheet.Cells[rows][columns]];
                 try
                 {
@@ -148,11 +149,16 @@ namespace MergePOSReports
             Excel.Range headers = exSheet.Range[exSheet.Cells[1], exSheet.Cells[numCols]];
             Excel.Range columnHeader;
 
-            int thisCol = 0;
+            int thisCol = 1;
 
-            while(thisCol <= numCols)
-            {
+            for (int i = 0; i < columnList.Count(); i++) {
 
+                while (thisCol <= numCols)
+                {
+                    if ((columnHeader = headers.Find(columnList[i])) == null) selectAlternateColumn(headers);
+                    else columns.Add(exSheet.Range[exSheet.Cells[2, numCols], exSheet.Cells[numRows, numCols]]);
+                    thisCol++;
+                }
             }
 
             return columns;
