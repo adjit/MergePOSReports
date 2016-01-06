@@ -138,7 +138,6 @@ namespace MergePOSReports
                 catch (Exception)
                 {
                     totalsRow = false;
-                    System.Diagnostics.Debug.WriteLine("There is no total row");
                 }
 
                 copyPasteColumns(thisWorkBook.Worksheets[1], getColumns(xlWorkSheet, columnList, rows, columns),totalRows+1);
@@ -196,7 +195,7 @@ namespace MergePOSReports
 
             for (int i = 0; i < selectedColumnCount; i++) {
 
-                if ((columnHeader = headers.Find(columnList[i])) == null) thisCol = selectAlternateColumn(headers);
+                if ((columnHeader = headers.Find(columnList[i])) == null) thisCol = selectAlternateColumn(headers, columnList[i]);
                 else thisCol = columnHeader.Column;
 
                 if (thisCol >= 0)
@@ -214,15 +213,17 @@ namespace MergePOSReports
             return columns;
         }
 
-        private int selectAlternateColumn(Excel.Range headers)
+        private int selectAlternateColumn(Excel.Range headers, string errorColumn)
         {
             int column = -1;
 
             alternateColumn ac = new alternateColumn();
 
+            ac.setErrorColumn(errorColumn);
+
             for(int i = 0; i < headers.Columns.Count; i++)
             {
-                ac.addAlternateColumnToList((string)(headers.Cells[1, i] as Excel.Range).Value);
+                ac.addAlternateColumnToList((string)(headers.Cells[1, i+1] as Excel.Range).Value);
             }
 
             if (ac.ShowDialog() == System.Windows.Forms.DialogResult.OK) return ac.getSelectedAlternateColumn();

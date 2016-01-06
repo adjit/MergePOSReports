@@ -22,6 +22,11 @@ namespace MergePOSReports
             alternateColumns.Items.Add(text);
         }
 
+        public void setErrorColumn(string text)
+        {
+            columnNotFound.Text = text;
+        }
+
         public int getSelectedAlternateColumn()
         {
             return alternateColumns.SelectedIndex+1;

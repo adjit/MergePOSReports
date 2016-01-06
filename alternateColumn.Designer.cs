@@ -36,6 +36,7 @@
             // 
             // alternateColumns
             // 
+            this.alternateColumns.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.alternateColumns.FormattingEnabled = true;
             this.alternateColumns.Location = new System.Drawing.Point(12, 55);
             this.alternateColumns.Name = "alternateColumns";
