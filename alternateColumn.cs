@@ -24,7 +24,7 @@ namespace MergePOSReports
 
         public int getSelectedAlternateColumn()
         {
-            return alternateColumns.SelectedIndex;
+            return alternateColumns.SelectedIndex+1;
         }
     }
 }

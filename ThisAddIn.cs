@@ -57,9 +57,10 @@ namespace MergePOSReports
                 columns,
                 thisRow,
                 thisColumn,
+                totalRows = 1,
                 state = 0;
 
-            Boolean totalRow = true;
+            Boolean totalsRow = true;
 
             string rootFolder,
                    prefix,
@@ -81,8 +82,8 @@ namespace MergePOSReports
             rootFolder = mp.rootFolder;
             prefix = mp.prefix;
 
-            //while(thisMonth <= endMonth && thisYear <= endYear)
-            if (thisMonth <= endMonth && thisYear <= endYear)
+            while(thisMonth <= endMonth && thisYear <= endYear)
+            //if (thisMonth <= endMonth && thisYear <= endYear)
             {
                 filePath = makeFilepath(rootFolder, prefix, thisMonth, thisYear);
 
@@ -95,8 +96,7 @@ namespace MergePOSReports
                     System.Windows.Forms.MessageBox.Show("Error opening file at path: " + filePath, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                     thisMonth++;
                     thisYear++;
-                    //continue;
-                    return;
+                    continue;
                 }
 
                 xlWorkSheet = xlWorkBook.Worksheets[1];
@@ -118,10 +118,15 @@ namespace MergePOSReports
                     {
                         columnList.Clear();
                         columnList = sc.getSelectedColumns();
+                        setTheseColumnHeaders(thisWorkBook.Worksheets[1], columnList);
                         state++;
+                        sc.Close();
                     }
-                    else { sc.Close(); return; }
-                    //else continue;
+                    else
+                    {
+                        sc.Close();
+                        continue;
+                    }
                 }
 
 
@@ -132,16 +137,53 @@ namespace MergePOSReports
                 }
                 catch (Exception)
                 {
-                    totalRow = false;
+                    totalsRow = false;
                     System.Diagnostics.Debug.WriteLine("There is no total row");
                 }
+
+                copyPasteColumns(thisWorkBook.Worksheets[1], getColumns(xlWorkSheet, columnList, rows, columns),totalRows+1);
+
+                if (totalsRow)
+                {
+                    rows -= 1;
+                    totalRows += rows;
+                }
+                else totalRows += rows;
+
                 xlWorkBook.Close(false);
+
+                if (thisMonth == 12)
+                {
+                    thisMonth = 1;
+                    thisYear++;
+                }
+                else thisMonth++;
+            }
+            return;
+        }
+
+        ///////////////////////////////////////
+        /*******    HELPER  METHODS    *******/
+        ///////////////////////////////////////
+
+        private void copyPasteColumns(Excel.Worksheet targetSheet, List<Excel.Range> sourceRanges, int startRow)
+        {
+            Excel.Range range;
+
+            for(int i = 0; i < sourceRanges.Count(); i++)
+            {
+                range = sourceRanges[i];
+                range.Copy(targetSheet.Cells[startRow, i+1]);
             }
         }
 
-         ///////////////////////////////////////
-        /*******    HELPER  METHODS    *******/
-       ///////////////////////////////////////
+        private void setTheseColumnHeaders(Excel.Worksheet xSheet, List<String> headers)
+        {
+            for(int i = 0; i < headers.Count(); i++)
+            {
+                xSheet.Cells[1, i + 1].Value2 = headers[i];
+            }
+        }
 
         private List<Excel.Range> getColumns(Excel.Worksheet exSheet, List<String> columnList, int numRows, int numCols)
         {
@@ -149,18 +191,26 @@ namespace MergePOSReports
             Excel.Range headers = exSheet.Range[exSheet.Cells[1], exSheet.Cells[numCols]];
             Excel.Range columnHeader;
 
-            int thisCol = 1;
+            int thisCol = 1,
+                selectedColumnCount = columnList.Count();
 
-            for (int i = 0; i < columnList.Count(); i++) {
+            for (int i = 0; i < selectedColumnCount; i++) {
 
-                while (thisCol <= numCols)
+                if ((columnHeader = headers.Find(columnList[i])) == null) thisCol = selectAlternateColumn(headers);
+                else thisCol = columnHeader.Column;
+
+                if (thisCol >= 0)
                 {
-                    if ((columnHeader = headers.Find(columnList[i])) == null) selectAlternateColumn(headers);
-                    else columns.Add(exSheet.Range[exSheet.Cells[2, numCols], exSheet.Cells[numRows, numCols]]);
-                    thisCol++;
+                    columns.Add(exSheet.Range[exSheet.Cells[2, thisCol], exSheet.Cells[numRows, thisCol]]);
                 }
+                else
+                {
+                    i--;
+                    System.Windows.Forms.MessageBox.Show("Error selecting column, click OK to continue", "Error", System.Windows.Forms.MessageBoxButtons.OK);
+                }
+                
             }
-
+            
             return columns;
         }
 

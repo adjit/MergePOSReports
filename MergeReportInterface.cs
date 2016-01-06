@@ -46,6 +46,7 @@ namespace MergePOSReports
         {
             ThisAddIn that = Globals.ThisAddIn;
             that.mergeReports(that.setMergeProperties(this.reportPrefix.Text, this.startDate.Value, this.endDate.Value, this.rootFolderText.Text));
+            this.Close();
         }
     }
 }
