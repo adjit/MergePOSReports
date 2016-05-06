@@ -7,13 +7,20 @@ using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using ExcelTools = Microsoft.Office.Tools.Excel;
 
+
+
 namespace MergePOSReports
 {
+
     public partial class ThisAddIn
     {
          ///////////////////////////////////////
         /*******  GLOBALS DECLARATION  *******/
        ///////////////////////////////////////
+
+        private const int REPORT_SHEET = 1;
+        private const int COPY_START_ROW = 2;
+        private const int MONTHS_IN_A_YEAR = 12;
 
         public struct MergeProperties
         {
@@ -67,9 +74,8 @@ namespace MergePOSReports
                    filePath;
 
             List<string> columnList = new List<string>();
-
             Excel.Workbook xlWorkBook,
-                           thisWorkBook = this.Application.ActiveWorkbook;
+                           thisWorkBook = Globals.ThisAddIn.Application.ActiveWorkbook;
 
             Excel.Worksheet xlWorkSheet;
 
@@ -86,7 +92,6 @@ namespace MergePOSReports
             //if (thisMonth <= endMonth && thisYear <= endYear)
             {
                 filePath = makeFilepath(rootFolder, prefix, thisMonth, thisYear);
-
                 try
                 {
                     xlWorkBook = this.Application.Workbooks.Open(filePath, false, true);
@@ -99,7 +104,7 @@ namespace MergePOSReports
                     continue;
                 }
 
-                xlWorkSheet = xlWorkBook.Worksheets[1];
+                xlWorkSheet = xlWorkBook.Worksheets[REPORT_SHEET];
                 range = xlWorkSheet.UsedRange;
                 rows = range.Rows.Count;
                 columns = range.Columns.Count;
@@ -118,7 +123,7 @@ namespace MergePOSReports
                     {
                         columnList.Clear();
                         columnList = sc.getSelectedColumns();
-                        setTheseColumnHeaders(thisWorkBook.Worksheets[1], columnList);
+                        setTheseColumnHeaders(thisWorkBook.ActiveSheet, columnList);
                         state++;
                         sc.Close();
                     }
@@ -140,7 +145,7 @@ namespace MergePOSReports
                     totalsRow = false;
                 }
 
-                copyPasteColumns(thisWorkBook.Worksheets[1], getColumns(xlWorkSheet, columnList, rows, columns),totalRows+1);
+                copyPasteColumns(thisWorkBook.ActiveSheet, getColumns(xlWorkSheet, columnList, rows, columns),totalRows+1);
 
                 if (totalsRow)
                 {
@@ -151,13 +156,14 @@ namespace MergePOSReports
 
                 xlWorkBook.Close(false);
 
-                if (thisMonth == 12)
+                if (thisMonth == MONTHS_IN_A_YEAR)
                 {
                     thisMonth = 1;
                     thisYear++;
                 }
                 else thisMonth++;
             }
+            Globals.ThisAddIn.Dispose();
             return;
         }
 
@@ -200,7 +206,7 @@ namespace MergePOSReports
 
                 if (thisCol >= 0)
                 {
-                    columns.Add(exSheet.Range[exSheet.Cells[2, thisCol], exSheet.Cells[numRows, thisCol]]);
+                    columns.Add(exSheet.Range[exSheet.Cells[COPY_START_ROW, thisCol], exSheet.Cells[numRows, thisCol]]);
                 }
                 else
                 {
